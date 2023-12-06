@@ -4,6 +4,7 @@ import "gorm.io/gorm"
 
 type User struct {
 	gorm.Model
-	Name  string
-	Email string `gorm:"unique"`
+	Name     string
+	Email    string    `gorm:"unique"`
+	Projects []Project // Association with Project
 }

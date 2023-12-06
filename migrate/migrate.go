@@ -16,4 +16,6 @@ func Migrate() {
 	// Migrate the schema
 
 	initializers.DB.AutoMigrate(&models.User{})
+	initializers.DB.AutoMigrate(&models.Project{})
+	initializers.DB.AutoMigrate(&models.FormData{})
 }
