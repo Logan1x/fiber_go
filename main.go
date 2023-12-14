@@ -5,13 +5,14 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/logan1x/fiber_go/initializers"
+	"github.com/logan1x/fiber_go/migrate"
 	"github.com/logan1x/fiber_go/routes"
 )
 
 func init() {
 	initializers.LoadEnvVariables()
 	initializers.ConnectToDB()
-	// migrate.Migrate()
+	migrate.Migrate()
 }
 
 func welcome(c *fiber.Ctx) error {
