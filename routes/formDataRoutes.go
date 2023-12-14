@@ -6,11 +6,12 @@ import (
 )
 
 func FormDataRoutes(app *fiber.App) {
-	formData := app.Group("/formData")
+	formData := app.Group("/formdata")
 
 	formData.Get("/", controller.FormDataIndex)
 	formData.Get("/:id", controller.FormDataShow)
 	formData.Post("/", controller.FormDataCreate)
+	formData.Post("/:projectId", controller.FormDataCreateWithProject)
 	formData.Put("/:id", controller.FormDataUpdate)
 	formData.Delete("/:id", controller.FormDataDelete)
 

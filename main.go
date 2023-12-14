@@ -27,6 +27,7 @@ func main() {
 	// Register routes
 	routes.UserRoutes(app)
 	routes.ProjectRoutes(app)
+	routes.FormDataRoutes(app)
 
 	port := os.Getenv("PORT")
 	if port == "" {

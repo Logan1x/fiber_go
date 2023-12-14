@@ -2,11 +2,10 @@ package models
 
 import (
 	"github.com/google/uuid"
-	"gorm.io/gorm"
 )
 
 type FormData struct {
-	gorm.Model
+	BaseModel
 	ProjectID       uuid.UUID // Foreign key
 	FormSubject     string
 	FormMessage     string
